@@ -1,4 +1,19 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
-@Controller('task-todo')
-export class TaskTodoController {}
+
+// http://localhost:3000/todos
+
+@Controller( 'todos' )
+export class TaskTodoController {
+
+  @Get()
+  
+  getAllTodos(){
+   
+    return[ 'Todo1','Todo2'];
+  }
+   
+
+}
+
+
